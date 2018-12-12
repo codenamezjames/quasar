@@ -30,6 +30,7 @@ export default {
       type: [Number, String],
       default: 5,
       validator (val) {
+        if (val === 'auto') return true
         const v = parseInt(val, 10)
         return v > 0 && v < 13
       }
